@@ -129,7 +129,8 @@ define(["require", "exports", "./helpers"], function (require, exports, helpers_
     var renderForecast = function (days) {
         $weatherDivs.forEach(function ($day, index) {
             // Add your code here:
-            var weatherContent = '';
+            var currentDay = days[index];
+            var weatherContent = helpers_1.createWeatherHTML(currentDay, weekDays);
             $day.append(weatherContent);
         });
     };
@@ -139,7 +140,7 @@ define(["require", "exports", "./helpers"], function (require, exports, helpers_
         $destination.empty();
         $container.css("visibility", "visible");
         getVenues().then(function (venues) { return renderVenues(venues); });
-        getForecast();
+        getForecast().then(function (days) { return renderForecast(days); });
         return false;
     };
     $submit.click(executeSearch);

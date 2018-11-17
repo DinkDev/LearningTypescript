@@ -5,7 +5,7 @@ define(["require", "exports"], function (require, exports) {
         return "<h2>" + name + "</h2>\n  <img class=\"venueimage\" src=\"" + iconSource + "\"/>\n  <h3>Address:</h3>\n  <p>" + location.address + "</p>\n  <p>" + location.city + "</p>\n  <p>" + location.country + "</p>";
     };
     exports.createWeatherHTML = function (currentDay, weekDays) {
-        return "<h2> High: " + currentDay.day.maxtemp_f + "</h2>\n    <h2> Low: " + currentDay.day.mintemp_f + "</h2>\n    <img src=\"https://" + currentDay.day.condition.icon + "\" class=\"weathericon\" />\n    <h2>" + weekDays[(new Date(currentDay.date)).getDay()] + "</h2>";
+        return "<h2> High: " + currentDay.day.maxtemp_f + "</h2>\n    <h2> Low: " + currentDay.day.mintemp_f + "</h2>\n    <h2> Sunrise: " + currentDay.astro.sunrise + "</h2>\n    <h2> Sunset: " + currentDay.astro.sunset + "</h2>\n    <h2> Currenty: " + currentDay.day.condition.text + "</h2>\n    <img src=\"https://" + currentDay.day.condition.icon + "\" class=\"weathericon\" />\n\n    <h2>" + weekDays[(new Date(currentDay.date)).getDay()] + "</h2>";
     };
 });
 //# sourceMappingURL=helpers.js.map
