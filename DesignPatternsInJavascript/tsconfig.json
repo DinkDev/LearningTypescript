@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "noImplicitAny": false,
+    "noEmitOnError": false, // was true
+    "removeComments": false,
+    "sourceMap": true,
+    "target": "es5",
+    // adding the following
+    "module": "amd",
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "outDir": "public",
+    "lib": [
+      "dom",
+      "es5",
+      "es6",
+      "es2015.promise"
+    ]
+  },
+  "include": [
+    "source/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
