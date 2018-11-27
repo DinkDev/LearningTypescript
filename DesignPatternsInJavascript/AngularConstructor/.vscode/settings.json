@@ -1,0 +1,42 @@
+{
+  // John Papa Angular Essentials - Recommended Settings
+
+  //Angular Essentials - Editor settings
+  "editor.codeLens": false,
+  "editor.renderWhitespace": "none",
+  "editor.autoIndent": true,
+  "editor.fontSize": 14,
+  "editor.formatOnPaste": false,
+  "editor.formatOnType": true,
+  "editor.letterSpacing": 1,
+  "editor.tabSize": 2,
+  "editor.wordWrap": "off",
+
+  //Angular Essentials - File settings
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 2000,
+  "files.exclude": {
+    "**/.git": true,
+    "**/.DS_Store": true,
+    "**/*.js": {
+      "when": "$(basename).ts"
+    },
+    "**/*.js.map": {
+      "when": "$(basename)"
+    }
+  },
+  "files.hotExit": "onExit",
+  "files.defaultLanguage": "typescript",
+  "files.trimTrailingWhitespace": true,
+
+  //Angular Essentials - Prettier settings
+  "prettier.singleQuote": true,
+  "prettier.printWidth": 100,
+
+  // Dale's additions:
+  "javascript.format.insertSpaceBeforeFunctionParenthesis": false,
+  "javascript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
+  "typescript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
+  "javascript.preferences.quoteStyle": "single",
+
+}
