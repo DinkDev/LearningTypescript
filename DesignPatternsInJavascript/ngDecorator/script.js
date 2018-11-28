@@ -7,6 +7,7 @@
     ctrl.tasks = [];
     ctrl.tasks.push(new Task(TaskRepository.get(1)));
     ctrl.tasks.push(new Task(TaskRepository.get(2)));
+    
     ctrl.tasks.push(new UrgentTask(TaskRepository.get(3)));
     ctrl.tasks.push(new UrgentTask(TaskRepository.get(4)));
 
