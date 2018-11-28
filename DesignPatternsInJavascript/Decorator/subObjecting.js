@@ -29,9 +29,13 @@ UrgentTask.prototype.notify = function() {
 };
 
 UrgentTask.prototype.save = function() {    // <---  override with new save method
+  this.notify();
   console.log('do special stuff before saving');
   Task.prototype.save.call(this);
 };
 
 var ut = new UrgentTask('This is urgent', 1);
 console.log(ut);
+
+ut.complete();
+ut.save();
