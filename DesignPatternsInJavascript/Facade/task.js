@@ -46,8 +46,7 @@ if (myTask.completed) {
   TaskService.save(myTask);
 }
 
-// now - let's add a facade to encapsulate this
-
+// now - let's add a facade to encapsulate this (create an object with a method to wrap up the complicated client side interface)
 var TaskServiceWrapper = function() {
   var completeAndNotify = function(task) {
     if (task.completed) {
