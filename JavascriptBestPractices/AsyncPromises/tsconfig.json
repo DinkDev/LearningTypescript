@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "module": "es2015",
+    "target": "es2015",
+    "lib": [
+      "es2016",
+      "dom"
+    ],
+  },
+  "exclude": [
+    "node_modules",
+    "app.js"
+  ],
+
+}
