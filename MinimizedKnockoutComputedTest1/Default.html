@@ -1,0 +1,41 @@
+﻿<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Knockout Computed Testbed</title>
+</head>
+<body>
+
+    <div data-bind="visible: !agencyIsSet()">
+        <span>Please set agency details:</span>
+        <div>
+            <label for="newAgencyName">Agency Name:</label>
+            <input type="text" id="newAgencyName" data-bind="value: newAgencyName"/>
+        </div>
+        <div>
+            <label for="newAgencyPoId">Agency ID:</label>
+            <input type="text" id="newAgencyPoId" data-bind="value: newAgencyId"/>
+        </div>
+
+        <br/>
+
+        <div data-bind="visible: isValid">
+            <button data-bind="click: saveNewAgency">Save New Agency</button>
+        </div>
+    </div>
+
+    <div data-bind="visible: agencyIsSet">
+        <a data-bind="attr: { href: addManifestUrl }">Add Manifest Items</a>
+    </div>
+
+    <span data-bind="text: ko.toJSON($data, null, 2)"></span>
+
+
+    <!-- TODO: need to add jQuery -->
+    <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/knockout/knockout-3.4.2.debug.js"></script>
+    <script type="text/javascript" src="DefaultDataAccess.js"></script>
+    <script type="text/javascript" src="DefaultViewModel.js"></script>
+
+  </body>
+</html>

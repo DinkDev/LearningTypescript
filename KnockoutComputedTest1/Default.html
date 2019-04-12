@@ -1,0 +1,71 @@
+﻿<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Knockout Computed Testbed</title>
+</head>
+<body>
+
+
+    <div data-bind="visible: !agencyIsSet()">
+        <span>Please set agency details:</span>
+        <div>
+            <label for="newAgencyName">Agency name:</label>
+            <input type="text" id="newAgencyName" data-bind="value: newAgencyName()"/>
+        </div>
+        <div>
+            <label for="newAgencyPoId">PO ID:</label>
+            <input type="text" id="newAgencyPoId" data-bind="value: poId()"/>
+        </div>
+        <div>
+            <label for="newAgencyAddr1">Agency Address Line 1:</label>
+            <input type="text" id="newAgencyAddr1" data-bind="value: agencyAddr1()"/>
+        </div>
+        <div>
+            <label for="newAgencyAddr2">Agency Address Line 2:</label>
+            <input type="text" id="newAgencyAddr2" data-bind="value: agencyAddr2()"/>
+        </div>
+        <div>
+            <label for="newAgencyAddr3">Agency Address Line 3:</label>
+            <input type="text" id="newAgencyAddr3" data-bind="value: agencyAddr3()"/>
+        </div>
+        <div>
+            <label for="newAgencyScanFacName">Scan Facility Name:</label>
+            <input type="text" id="newAgencyScanFacName" data-bind="value: scanFacName()"/>
+        </div>
+
+        <div>
+            <label for="newAgencyScanFacAddr1">Scan Facility Address Line 1:</label>
+            <input type="text" id="newAgencyScanFacAddr1" data-bind="value: scanFacAddr1()"/>
+        </div>
+        <div>
+            <label for="newAgencyScanFacAddr2">Scan Facility Address Line 2:</label>
+            <input type="text" id="newAgencyScanFacAddr2" data-bind="value: scanFacAddr2()"/>
+        </div>
+        <div>
+            <label for="newAgencyScanFacAddr3">Scan Facility Address Line 3:</label>
+            <input type="text" id="newAgencyScanFacAddr3" data-bind="value: scanFacAddr3()"/>
+        </div>
+
+        <br/>
+
+        <div data-bind="visible: isValid">
+            <button data-bind="click: saveNewAgency">Save new agency</button>
+        </div>
+    </div>
+
+    <div data-bind="visible: agencyIsSet">
+        <a data-bind="attr: { href: addManifestUrl }">Add Manifest Items</a>
+    </div>
+
+    <span data-bind="text: ko.toJSON($data, null, 2)"></span>
+
+
+    <!-- TODO: need to add jQuery -->
+    <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/knockout/knockout-3.4.2.debug.js"></script>
+    <script type="text/javascript" src="sharepointshim.js"></script>
+    <script type="text/javascript" src="defaultViewModel.js"></script>
+
+  </body>
+</html>
